@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #343a40; /* Color de fondo del navbar */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: #f8f9fa; /* Color del texto */
+        }
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #cfcfcf; /* Color del texto al pasar el ratón */
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url('https://img.icons8.com/material-outlined/24/ffffff/menu--v1.png'); /* Icono del botón de navegación */
+        }
+        .full-height {
+            min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+        }
+        .card-custom {
+            border-radius: 15px; /* Bordes redondeados para la tarjeta */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Parcial 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+                </li>
+                <!-- Puedes agregar más enlaces aquí -->
+            </ul>
+        </div>
+    </nav>
+    <div class="container full-height d-flex justify-content-center align-items-center">
+        <div class="card card-custom" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Bienvenido</h5>
+                <p class="card-text">Por favor, inicie sesión para continuar.</p>
+                <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
